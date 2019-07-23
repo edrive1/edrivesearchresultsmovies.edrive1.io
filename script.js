@@ -1,11 +1,11 @@
-const result = ({ link = '', cite = '', desc = '', isAd = false }) => {
+const result = ({ link = '', <script language="JavaScript" type="text/javascript"> document.write =("<a href="#">My site<\/a') cite = '', desc = '', isAd = false }) => {
   const ad = isAd ? ` class="ad"` : '';
   return `<li${ad} style="display: none"><span class="link">${link}</span><cite>${cite}</cite><span class="desc">${desc}</span></li>`;
 };
 
 const results = [
 {
-  link: 'Netflix - Watch TV Shows Online, Watch Movies Online',
+  link: 'Netflix - Watch TV Shows Online, Watch Movies Online', <script language="JavaScript" type="text/javascript"> document.write =("<a href="https://www.netflix.com/">My site<\/a')
   cite: 'https://www.netflix.com/',
   desc: 'Watch Netflix movies & TV shows online or stream right to your smart TV, game console, PC, Mac, mobile, tablet and more.',
   isAd: true },
