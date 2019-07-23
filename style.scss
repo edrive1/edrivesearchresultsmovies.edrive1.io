@@ -1,0 +1,211 @@
+/* The version of Bourbon used in this Pen was 4.* */
+@import "bourbon";
+.typed-cursor {
+	opacity: 1;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+}
+
+.search-bar {
+	background-color: #F1F1F1;
+	border-bottom: 1px solid #E5E5E5;
+	padding: 11px 15px;
+	.logo {
+		width: 95px;
+		height: 50px;
+		background-size: 95px;
+		background-position: center center;
+		background-image: url(https://i.imgur.com/72QYM2n.png);
+		background-repeat: no-repeat;
+		float: left;
+		margin-top: 4px;
+	}
+	.input {
+		@include clearfix;
+		position: relative;
+		max-width: 600px;
+		margin-left: 115px;
+		button {
+			background-color: #4688F1;
+			border: none;
+			width: 40px;
+			height: 40px;
+			float: left;
+			padding: 0;
+			background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/6444/magnifying-glass-icon.png);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: 19px;
+		}
+		input {
+			border: 1px solid #D9D9D9;
+			border-right: none;
+			// position: absolute;
+			// top: 0;
+			// left: 0;
+			float: left;
+			width: calc(100% - 40px);
+			height: 40px;
+			line-height: 40px;
+			outline: none;
+			padding: 0 0 0 10px;
+			font-family: arial, sans-serif;
+			font-size: 16px;
+			&:hover {
+				border: 1px solid darken(#D9D9D9, 10%);
+				border-right: none;
+			}
+		}
+	}
+}
+
+.results {
+	margin-left: 130px;
+	max-width: 600px;
+	padding: 10px 0;
+}
+
+.pager-totals {
+	color: #808080;
+	font-size: 13px;
+	margin-bottom: 25px;
+	display: none;
+}
+
+.results-inner {
+	margin: 0;
+	padding: 0;
+	li {
+		list-style-type: none;
+		margin-bottom: 25px;
+		.link {
+			color: #1a0dab;
+			text-decoration: none;
+			cursor: pointer;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		cite {
+			color: #006621;
+			display: block;
+			font-size: 14px;
+			font-weight: normal;
+			font-style: normal;
+			line-height: 16px;
+			&:after {
+				content: "";
+				display: inline-block;
+				margin-left: 5px;
+				top: -2px;
+				position: relative;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 5px 4px 0 4px;
+				border-color: #00591E transparent transparent transparent;
+			}
+		}
+		.desc {
+			color: #545454;
+			font-size: 14px;
+			line-height: 1.4;
+		}
+		&.ad {
+			cite {
+				&:before {
+					content: "Ad";
+					border-radius: 2px;
+					background-color: #59946b;
+					color: #fff;
+					display: inline-block;
+					padding: 0 2px;
+					font-size: 12px;
+					line-height: 14px;
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+}
+
+.browser {
+	width: 80%;
+	margin: 20px auto 0;
+	box-shadow: 0px 7px 29px -4px rgba(0, 0, 0, 0.45);
+	border: 1px solid #DDDDDD;
+	border-radius: 5px;
+	height: 600px;
+	overflow: auto;
+}
+
+.browser-chrome {
+	border-bottom: 1px solid #DDDDDD;
+	background-color: #F9F9F9;
+	height: 40px;
+	position: relative;
+	.controls {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 10px;
+	}
+	span {
+		background-color: #fff;
+		border: 1px solid #D6D6D6;
+		border-radius: 50%;
+		width: 12px;
+		height: 12px;
+		float: left;
+		margin-right: 8px;
+	}
+}
+
+@media (max-width: 730px) {
+	.results {
+		margin-left: 0;
+		padding: 0 15px;
+	}
+}
